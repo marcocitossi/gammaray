@@ -1,0 +1,31 @@
+NaI
+1.0
+2
+2	1	1
+1	8	16
+p	40.0	20.0
+p	.1 	80.0   12.0
+1.0
+20
+sg
+40	20  30  45
+
+
+- Material (character string). The name has no effect on the simulation except for Sodium Iodine. When writing NaI, 
+  accurate Sodium Iodine cross sections will be used instead of the analytical approximations.
+- Density in g/cm3 (1 real number FP)	 
+- Number of different elements per molecule or compound (1 integer number).  
+- Atom number per molecule of first element, Z and A (3 integer number) 
+- Atom number per molecule of second element, Z and A (3 integer number) 
+  ------
+  ------
+- Geometry of the medium (1 character plus 2 real numbers FP). Character = p (plane) or c (cylinder). 
+  First FP = thickness (plane) or height (cylinder). Second FP = no effect (plane) , radius (cil.).
+  All in cm. 
+- Beam geometry (1 character and 3 real FP). Character = p (parallel) or i (isotropic). 
+  First FP = radius of beam (parallel) or source (isotropic). Second FP = no effect (parallel) or distance 
+  source - medium (isotropic). Third FP = diaphragm radius. All in cm.
+- Photon energy (MeV) (1 real FP).
+- Photon number (1 integer)(i.e. number of histories).
+- Graphical options (1 character string). sg (without plot), t tracks are plotted, p interaction points are plotted.
+- Bin number for output data histograms (4 integer): bin number in depth (>4), bin number in energy, Bin number in radial distance, Bin number for (azimuth) angular distribution.
